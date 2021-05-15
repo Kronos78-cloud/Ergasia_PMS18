@@ -115,6 +115,14 @@ input.text {
     margin: 2px;
 }
 
+select.text {
+    border: 1px solid #3d4852;
+    background-color: #6495ED;
+    font-size: medium;
+    padding: 6px;
+    margin: 2px;
+}
+
 h2 a {
     color: #6495ED;
 }

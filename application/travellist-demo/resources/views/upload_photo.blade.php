@@ -11,7 +11,7 @@
             <p><label for="image">Photo</label>
                 <input type="file" name="image" />
             </p>
-                <p><label for="place">Where this photo was taken?</label>
+            <p><label for="place">Where this photo was taken?</label>
                 <select class="text" name="place" id="place">
                     <option value="0">Pick an Existing Place...</option>
                     @foreach ($places as $place)
@@ -19,7 +19,7 @@
                     @endforeach
                     <option value="new">Add a New Place</option>
                 </select>
-                </p>
+            </p>
                 <h3>...Or Add a New Place</h3>
             <p><label for="place_name">Place Name</label>
                 <input type="text" class="text" name="place_name" id="place_name" />
