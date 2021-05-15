@@ -62,6 +62,20 @@ class MainController extends Controller
             'photos' => $photos
         ]);
     }
+
+    function homepage()
+    {
+     $visited = Place::where('visited', 1)->get();
+        $togo = Place::where('visited', 0)->get();
+
+        $photos = Photo::all();
+
+        return view('travel_list_home', [
+            'visited' => $visited,
+            'togo' => $togo,
+            'photos' => $photos
+        ]);
+    }
 }
 
 ?>

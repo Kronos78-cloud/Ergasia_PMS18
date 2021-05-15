@@ -9,7 +9,7 @@ mysql_app_user: travellist_user
 mysql_app_pass: nikos1234
 
 # Web Server Setup
-http_host: 35.205.143.178
+http_host: 35.187.161.90
 remote_www_root: /var/www
 app_root_dir: travellist-demo
 document_root: "{{ remote_www_root }}/{{ app_root_dir }}/public"
