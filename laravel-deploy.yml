@@ -44,12 +44,12 @@
 
     - name: Install Dependencies with Composer
       become: false
-      #composer:
-        #command: install
-        #working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
-      community.general.composer:
+      composer:
         command: update
         working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
+      #community.general.composer:
+        #command: update
+        #working_dir: "{{ remote_www_root }}/{{ app_root_dir }}"
       tags: [ 'composer:update' ]
 
     - name: Generate app key
