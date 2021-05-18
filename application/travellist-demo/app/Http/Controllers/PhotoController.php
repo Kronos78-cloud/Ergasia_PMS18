@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Photo;
 use App\Place;
+use Notification;
+use App\Notifications\PhotoUploaded;
+use Auth;
 
 class PhotoController extends Controller
 {
@@ -36,6 +39,18 @@ class PhotoController extends Controller
         $photo->place()->associate($place);
         $photo->image = $request->image->store('/', 'public');
         $photo->save();
+        //notify user by sending email
+        $data = Auth::user()->email;
+        $billData = [
+            'name' => $data,
+            'body' => 'Congratulations!You have just uploaded the photo of a new vaccination center!',
+            'thanks' => 'Thank you',
+            'text' => 'Click here to go to site',
+            'offer' => url('http://35.240.22.221/'),
+            'bill_id' => 30061
+        ];
+
+        Notification::route('mail', $data)->notify(new PhotoUploaded($billData));
 
         return redirect()->route('Main');
     }

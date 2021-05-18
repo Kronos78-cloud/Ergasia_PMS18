@@ -9,13 +9,13 @@ mysql_app_user: travellist_user
 mysql_app_pass: nikos1234
 
 # Web Server Setup
-http_host: 35.205.143.178
+http_host: 35.240.22.221
 remote_www_root: /var/www
 app_root_dir: travellist-demo
 document_root: "{{ remote_www_root }}/{{ app_root_dir }}/public"
 
 # Laravel Env Variables
-app_name: Travellist
+app_name: Operation_Freedom
 app_env: dev
 app_debug: true
 app_url: "http://{{ http_host }}"
