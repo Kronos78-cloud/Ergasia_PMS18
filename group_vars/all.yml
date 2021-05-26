@@ -4,23 +4,28 @@ remote_user: nick
 
 # MySQL Setup
 mysql_root_password: nikos12345
-mysql_app_db: travellist
-mysql_app_user: travellist_user
+mysql_freedom_db: freedom
+mysql_freedom_user: freedomUser
+mysql_owncloud_db: owncloud
+mysql_owncloud_user: owncloudUser
 mysql_app_pass: nikos1234
 
 # Web Server Setup
-http_host: 35.240.22.221
+http_host1: 35.205.214.139
+http_host2: 34.77.179.26
 remote_www_root: /var/www
-app_root_dir: travellist-demo
-document_root: "{{ remote_www_root }}/{{ app_root_dir }}/public"
+freedom_root_dir: freedom
+owncloud_root_dir: owncloud
+document_root1: "{{ remote_www_root }}/{{ freedom_root_dir }}/public"
+document_root2: "{{ remote_www_root }}/{{ owncloud_root_dir }}/public"
 
 # Laravel Env Variables
 app_name: Operation_Freedom
 app_env: dev
 app_debug: true
-app_url: "http://{{ http_host }}"
+app_url: "http://{{ http_host1 }}"
 db_host: localhost
 db_port: 3306
-db_database: "{{ mysql_app_db }}"
-db_user: "{{ mysql_app_user }}"
+db_database: "{{ mysql_freedom_db }}"
+db_user: "{{ mysql_freedom_user }}"
 db_pass: "{{ mysql_app_pass }}"

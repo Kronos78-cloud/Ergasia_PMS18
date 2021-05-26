@@ -1,5 +1,8 @@
-[dev]
+[freedom]
 pms18-1
+
+[owncloud]
+pms18-2
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
