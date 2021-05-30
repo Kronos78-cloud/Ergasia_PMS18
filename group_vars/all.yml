@@ -11,8 +11,8 @@ mysql_owncloud_user: owncloudUser
 mysql_app_pass: nikos1234
 
 # Web Server Setup
-http_host1: 35.205.214.139
-http_host2: 34.77.179.26
+http_host1: 35.205.214.139 # freedom app server
+http_host2: 34.77.179.26 # owncloud app server
 remote_www_root: /var/www
 freedom_root_dir: freedom
 owncloud_root_dir: owncloud
