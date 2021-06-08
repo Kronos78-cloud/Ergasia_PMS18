@@ -2,24 +2,23 @@
 - hosts: freedom
   become: true
   roles:
-    - { role: setup, tags: ['setup'] }
+    - { role: setup }
 
-    - { role: mariadb1, tags: ['mysql', 'mariadb', 'db', 'lemp'] }
+    - { role: mariadb1 }
 
-    - { role: php1, tags: ['php', 'web', 'php-fpm', 'lemp'] }
+    - { role: php1 }
 
-    - { role: nginx1, tags: ['nginx', 'web', 'http', 'lemp'] }
+    - { role: nginx1 }
 
-    - { role: composer, tags: ['composer'] }
+    - { role: composer }
 
 - hosts: owncloud
   become: true
   roles:
-    - { role: setup, tags: ['setup'] }
+    - { role: setup }
 
-    - { role: mariadb2, tags: ['mysql', 'mariadb', 'db', 'lemp'] }
+    - { role: mariadb2 }
 
-    - { role: php2, tags: ['php', 'web', 'php-fpm', 'lemp'] }
+    - { role: php2 }
 
-    - { role: nginx2, tags: ['nginx', 'web', 'http', 'lemp'] }
-
+    - { role: nginx2 }

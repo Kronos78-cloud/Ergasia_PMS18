@@ -46,7 +46,7 @@ class PhotoController extends Controller
             'body' => 'Congratulations!You have just uploaded the photo of a new vaccination center!',
             'thanks' => 'Thank you',
             'text' => 'Click here to go to site',
-            'offer' => url('http://35.240.22.221/'),
+            'offer' => url('http://104.155.61.103/'),
             'bill_id' => 30061
         ];
 

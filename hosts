@@ -1,8 +1,8 @@
 [freedom]
-pms18-1
+104.155.61.103
 
 [owncloud]
-pms18-2
+35.205.27.212
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
