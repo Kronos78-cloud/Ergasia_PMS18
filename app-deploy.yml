@@ -75,5 +75,7 @@
       file:
         path: "{{ remote_www_root }}/{{ owncloud_root_dir }}"
         state: directory
+        recurse: yes
         mode: '0775'
         owner: www-data
+        group: www-data
